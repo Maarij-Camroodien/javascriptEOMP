@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Open+Sans:wght@300&family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: white;
+}
+
+.aboutcont {
+    color: white;
+}
+
+.headpar {
+    color: white;
+}
+
+footer {
+    color: white;
+    background-color: black;
+    bottom: 0;
+    margin-top: 1rem;
+}
+
+body {
+    background-color: rgba(32,33,36,255);
+}
+
+.navbar {
+    background-color: black;
+}
+
+.navbar-brand:hover {
+    color: red;
+}
+
+.navbar-brand {
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+    color: white;
+}
+
+.nav-link:hover {
+    color: red;
+}
+
+.nav-link {
+    color: white;
+}
