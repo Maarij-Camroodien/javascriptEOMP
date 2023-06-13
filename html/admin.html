@@ -31,7 +31,8 @@
       </nav>
 
       <main>
-        <div class="modalbtn">
+        <h1 class="text-decoration-underline text-center">Admin</h1>
+        <div>
           <!-- Button trigger modal -->
 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
   ADD PRODUCT
@@ -42,22 +43,22 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Product</h1>
+        <h2 class="modal-title fs-5 text-black" id="exampleModalLabel">Add Product</h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <h6 class="name">Name</h6>
-        <input placeholder="Enter product name..." type="text" class="w-100">
+        <input id="name" placeholder="Enter product name..." type="text" class="w-100">
         <h6 class="imageurl">ImageUrl</h6>
-        <input placeholder="Enter product image..." type="text" class="w-100">
+        <input id="image" placeholder="Enter product image..." type="text" class="w-100">
         <h6 class="details">Details</h6>
-        <input placeholder="Enter product details" type="text" class="w-100">
+        <input id="detail" placeholder="Enter product details..." type="text" class="w-100">
         <h6 class="price">Price</h6>
-        <input placeholder="Enter product price..." type="text" class="w-100">
+        <input id="price" placeholder="Enter product price..." type="text" class="w-100">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" id="savebtn" >Save changes</button>
       </div>
     </div>
   </div>
@@ -65,7 +66,7 @@
         </div>
 
         <!-- <div class="container-fluid"> -->
-          <table class="text-center text-white w-100">
+          <table id="tablecon" class="tablecon text-center text-white w-100">
             <thead class="tablecont">
               <tr>
               <th>ID</th>
@@ -84,7 +85,7 @@
       </main>
 
       <footer class="foot text-center">
-        &copy;MANGAVERSE
+        <h4>&copy;MANGAVERSE</h4>
       </footer>
     
     <!-- BOOTSTRAP JS -->
