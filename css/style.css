@@ -39,8 +39,10 @@ footer {
     padding: 1.5rem;
 } */
 
+html,
 body {
     background-color: rgba(32,33,36,255);
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -116,8 +118,8 @@ tr {
 }
 
 .productCard{
-    width: 25rem;
-    height: fit-content;
+    width: 20rem;
+    height: 85%;
 }
 
 .bttn{
@@ -153,3 +155,9 @@ tr {
     /* width: 50rem; */
     /* float: right; */
 /* } */
+
+/* @media screen and (max-width: 425px){
+    .productCard{
+        display: inline-block;
+    }
+} */
