@@ -5,7 +5,7 @@ let manga = JSON.parse(localStorage.getItem("manga"))
   : localStorage.setItem(
       "manga",
       JSON.stringify([
-        {
+        { 
           id: 1,
           name: "Jujutsu Kaisen Vol.1",
           image: "https://i.postimg.cc/1tYFmYHT/jujutsu-kaisen-manga1.jpg",
@@ -86,7 +86,7 @@ function loadData() {
   // displaying on html
   manga.forEach((item) => {
     display.innerHTML += `
-        <div class="col-4 justify-content-center colum">
+        <div class="col-6  justify-content-center colum">
             <div class="card productCard">
                 <div class="image">
                     <img src="${item.image}" class="card-img-top" alt="product" loading="lazy">
