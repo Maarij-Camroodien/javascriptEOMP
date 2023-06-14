@@ -72,29 +72,29 @@ function deletebtn(id) {
     loadData(manga)
 }
 // edit function
-editbtn.addEventListener('click', editproducts)
+// editbtn.addEventListener('click', editproducts)
 
-// function editproducts(item) {
-//     this.id = item.id;
-//     this.name = document.querySelector("#name1").value;
-//     this.image = document.querySelector("#image1").value;
-//     this.detail = document.querySelector("#detail1").value;
-//     this.price = document.querySelector("#price1").value;
+function editproducts(item) {
+    this.id = item.id;
+    this.name = document.querySelector("#name1").value;
+    this.image = document.querySelector("#image1").value;
+    this.detail = document.querySelector("#detail1").value;
+    this.price = document.querySelector("#price1").value;
 
-//     let itemsIndex = manga.findIndex((item)=>{
-//         return item.id === item.id;
-//     })
+    let itemsIndex = manga.findIndex((item)=>{
+        return item.id === item.id;
+    })
 
-//     products[itemsIndex] = {
-//     id: this.id,
-//     name: this.name, 
-//     image: this.image,
-//     detail: this.detail, 
-//     price: this.price
-// };
-//     localStorage.setItem('manga', JSON.stringify(manga));
-//     loadData();
-// }
+    products[itemsIndex] = {
+    id: this.id,
+    name: this.name, 
+    image: this.image,
+    detail: this.detail, 
+    price: this.price
+};
+    localStorage.setItem('manga', JSON.stringify(manga));
+    loadData();
+}
 
 
 // function editbtn(id) {

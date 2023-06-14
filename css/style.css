@@ -114,3 +114,42 @@ tr {
     padding: 5px;
     border-radius: 0.5rem;
 }
+
+.productCard{
+    width: 25rem;
+    height: fit-content;
+}
+
+.bttn{
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: end;
+}
+
+
+.image{
+    width: 100%;
+    height: 35rem;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+}
+
+.card-body{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.colum{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* #prodcard { */
+    /* width: 50rem; */
+    /* float: right; */
+/* } */
