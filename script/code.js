@@ -1,4 +1,6 @@
 let display = document.querySelector(".productsdisp");
+let pricesorting = document.querySelector("#pricesortbtn");
+let nameSort = document.querySelector("#namesortbtn")
 
 let manga = JSON.parse(localStorage.getItem("manga"))
   ? JSON.parse(localStorage.getItem("manga"))
@@ -71,11 +73,24 @@ let manga = JSON.parse(localStorage.getItem("manga"))
         },
         {
           id: 10,
-          name: "That Time I Got Reincarnated As A Slime Vol.1",
-          image:
-            "https://i.postimg.cc/9MyGN488/that-time-i-got-reincarnated-as-a-slime-vol-1-manga.jpg",
-          detail: "Volume 1 of That Time I Got Reincarnated As A Slime",
-          price: "R195",
+          name: "Bleach Vol.1",
+          image:"https://i.postimg.cc/jqZZc8xF/bleach-vol-1.jpg",
+          detail: "Volume 1 Bleach",
+          price: "R290",
+        },
+        {
+          id: 11,
+          name: "Bleach Vol.1",
+          image:"https://i.postimg.cc/jqZZc8xF/bleach-vol-1.jpg",
+          detail: "Volume 1 Bleach",
+          price: "R290",
+        },
+        {
+          id: 12,
+          name: "Bleach Vol.1",
+          image:"https://i.postimg.cc/jqZZc8xF/bleach-vol-1.jpg",
+          detail: "Volume 1 Bleach",
+          price: "R290",
         },
       ])
     );
@@ -86,7 +101,7 @@ function loadData() {
   // displaying on html
   manga.forEach((item) => {
     display.innerHTML += `
-        <div class="col-6  justify-content-center colum">
+        <div class="col-3  justify-content-center colum">
             <div class="card productCard">
                 <div class="image">
                     <img src="${item.image}" class="card-img-top" alt="product" loading="lazy">
@@ -106,4 +121,29 @@ function loadData() {
 }
 loadData();
 
-console.log(manga);
+pricesorting.addEventListener("click", (event) => {
+  event.preventDefault();
+  manga = manga.sort((a, b) => {
+    if (a.price < b.price) {
+      return -1;
+    } else {
+      return 1;
+    }
+    return 0;
+  });
+  loadData();
+});
+
+nameSort.addEventListener("click", (event) => {
+  event.preventDefault();
+  manga = manga.sort((a, b) => {
+    if (a.name < b.name) {
+      return -1;
+    } else {
+      return 1;
+    }
+    return 0;
+  });
+  loadData();
+});
+// console.log(manga);
