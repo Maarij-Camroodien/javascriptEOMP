@@ -136,14 +136,10 @@ pricesorting.addEventListener("click", (event) => {
 });
 
 function checkoutItemBtn(item) {
-  try{
-      
-    productslist.push(item);
-      localStorage.setItem('products', JSON.stringify(manga));
-  }catch(e) {
-      console.log(`Error message: ${e.message}`);
-  }
+      productslist.push(item);
+      localStorage.setItem('products', JSON.stringify(productslist));
 }
+loadData()
 
 nameSort.addEventListener("click", (event) => {
   event.preventDefault();
