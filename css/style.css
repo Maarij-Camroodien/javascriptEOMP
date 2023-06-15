@@ -158,8 +158,14 @@ tr {
     flex-direction: column;
 }
 
-#clearcart {
-    float: left;
+/* css for form */
+.forminp {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    font-size: x-large;
 }
 
 /* #prodcard { */
