@@ -78,7 +78,7 @@ body {
 }
 
 #homeprod {
-    height: 100;
+    height: 100%;
 }
 
 .carousel-item img {
@@ -144,11 +144,12 @@ tr {
     height: fit-content;
 }
 
-.bttn{
+#addtocart{
     width: 100%;
+    margin: 0;
     /* height: 100%; */
-    display: flex;
-    justify-content: end;
+    /* display: flex;
+    justify-content: end; */
 }
 
 .image{
