@@ -1,20 +1,35 @@
-let manga = JSON.parse(localStorage.getItem('products'))
+let productslist = JSON.parse(localStorage.getItem('products'))
 let display = document.querySelector('.checktablecontent')
 
 function loadData() {
     // clear items
     display.innerHTML = ""
     // displaying on html
-    manga.forEach((item) => {
+    productslist.forEach((item) => {
         display.innerHTML += `
         <tr>
-            <th scope="row">${item}</th>
-            <td>${item}</td>
-            <td><img src="${item}" style="width:5rem;"></img></td>
-            <td>${item}</td>
-            <td>${item}</td>
-            <td>
+            <td>${item.name}</td>
+            <td><img src="${item.image}" style="width:5rem;"></img></td>
+            <td>${item.detail}</td>
+            <td>${item.price}</td>
+            <td><button style=" border: none; background-color: white;" onclick="deletebtn(${item.id})"><i class="bi bi-trash-fill"></i></button></td>
+        </tr>
         `
     })
 }
 loadData()
+
+function deletebtn(id) {
+    productslist = productslist.filter(item => {
+        return item.id !== id
+    })
+    // update localStorage
+    localStorage.setItem('products', JSON.stringify(productslist))
+    // Show items
+    loadData(productslist)
+}
+
+function clearcart(){
+    localStorage.removeItem('products')
+    location.reload()
+}

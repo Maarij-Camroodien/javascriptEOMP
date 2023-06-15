@@ -37,13 +37,13 @@ function loadData() {
            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
            <div class="modal-body">
-           <h6 class="name">Name</h6>
+           <h6 class="name d-flex justify-content-start text-black">Name</h6>
         <input id="name1${item.id}" placeholder="Enter product name..." type="text" class="w-100">
-        <h6 class="imageurl">ImageUrl</h6>
+        <h6 class="imageurl d-flex justify-content-start text-black">ImageUrl</h6>
         <input id="image1${item.id}" placeholder="Enter product image..." type="text" class="w-100">
-        <h6 class="details">Details</h6>
+        <h6 class="details d-flex justify-content-start text-black">Details</h6>
         <input id="detail1${item.id}" placeholder="Enter product details..." type="text" class="w-100">
-        <h6 class="price">Price</h6>
+        <h6 class="price d-flex justify-content-start text-black">Price</h6>
         <input id="price1${item.id}" placeholder="Enter product price..." type="text" class="w-100">
         </div>
         <div class="modal-footer">
