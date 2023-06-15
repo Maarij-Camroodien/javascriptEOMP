@@ -21,7 +21,7 @@ function loadData() {
             <td>${item.name}</td>
             <td><img src="${item.image}" style="width:5rem;"></img></td>
             <td>${item.detail}</td>
-            <td>${item.price}</td>
+            <td>R${item.price}</td>
             <td>
             <!-- Button trigger modal -->
             <button style=" border: none;" id="editbtn" type="button" data-bs-toggle="modal" data-bs-target="#editModal${item.id}">
