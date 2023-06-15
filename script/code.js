@@ -13,49 +13,49 @@ let manga = JSON.parse(localStorage.getItem("manga"))
           name: "Jujutsu Kaisen Vol.1",
           image: "https://i.postimg.cc/1tYFmYHT/jujutsu-kaisen-manga1.jpg",
           detail: "Volume 1 of Jujutsu Kaisen",
-          price: "R250",
+          price: 250,
         },
         {
           id: 2,
           name: "Jujutsu Kaisen Vol.4",
           image: "https://i.postimg.cc/FKPHyX3W/jujutsu-kaisen-manga2.png",
           detail: "Volume 4 of Jujutsu Kaisen",
-          price: "R350",
+          price: 350,
         },
         {
           id: 3,
           name: "Chainsaw Man Vol.1",
           image: "https://i.postimg.cc/j2mFGbFS/chainsaw-man-vol-1.jpg",
           detail: "Volume 1 of Chainsaw Man",
-          price: "R300",
+          price: 300,
         },
         {
           id: 4,
           name: "Solo Leveling Vol.1",
           image: "https://i.postimg.cc/XY661fF6/solo-leveling-vol-1-comic.jpg",
           detail: "Volume 1 of Solo Leveling",
-          price: "R325",
+          price: 325,
         },
         {
           id: 5,
           name: "Attack on Titan Vol.10",
           image: "https://i.postimg.cc/T1TdpBj0/attack-on-titan-vol-10.jpg",
           detail: "Volume 10 of Attack on Titan",
-          price: "R250",
+          price: 250,
         },
         {
           id: 6,
           name: "Naruto Vol.1",
           image: "https://i.postimg.cc/TYjJm34T/naruto-vol-1.jpg",
           detail: "Volume 1 of Naruto",
-          price: "R350",
+          price: 350,
         },
         {
           id: 7,
           name: "One peice Vol.2",
           image: "https://i.postimg.cc/sxTLN01g/one-piece-vol-2.jpg",
           detail: "Volume 2 of One Peice",
-          price: "R360",
+          price: 360,
         },
         {
           id: 8,
@@ -63,35 +63,35 @@ let manga = JSON.parse(localStorage.getItem("manga"))
           image:
             "https://i.postimg.cc/SR9BJGKS/demon-slayer-kimetsu-no-yaiba-vol-2.jpg",
           detail: "Volume 2 of Demon Slayer",
-          price: "R275",
+          price: 275,
         },
         {
           id: 9,
           name: "Tokyo Ghoul Vol.1",
           image: "https://i.postimg.cc/9Fmfv4g4/tokyo-ghoul-vol-1.jpg",
           detail: "Volume 1 of Tokyo Ghoul",
-          price: "R380",
+          price: 380,
         },
         {
           id: 10,
           name: "Bleach Vol.1",
           image:"https://i.postimg.cc/jqZZc8xF/bleach-vol-1.jpg",
           detail: "Volume 1 of Bleach",
-          price: "R290",
+          price: 290,
         },
         {
           id: 11,
           name: "Beserk Vol.1",
           image:"https://i.postimg.cc/YSP3zJrG/berserk-volume-1.jpg",
           detail: "Volume 1 of Beserk",
-          price: "R290",
+          price: 290,
         },
         {
           id: 12,
           name: "Death Note Vol.6",
           image:"https://i.postimg.cc/XYC7v5rR/death-note-vol-6.jpg",
           detail: "Volume 6 of Death Note",
-          price: "R230",
+          price: 230,
         },
       ])
     );
@@ -110,7 +110,7 @@ function loadData() {
                     <div class="card-body">
                         <h5 class="card-title">${item.name}</h5>
                         <p class="card-text">${item.detail}</p>
-                        <p class="card-price">${item.price}</p>
+                        <p class="card-price">R${item.price}</p>
                         <div class="bttn">
                         <button class="btn text-center" id="addtocart" onclick='checkoutItemBtn(${JSON.stringify(item)})'>Add to Cart</button>
                         </div>

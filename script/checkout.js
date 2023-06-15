@@ -1,5 +1,8 @@
 let productslist = JSON.parse(localStorage.getItem('products'))
 let display = document.querySelector('.checktablecontent')
+let amount = productslist.reduce((a,b) => a + b.price, 0)
+
+console.log(amount);
 
 function loadData() {
     // clear items
@@ -11,8 +14,9 @@ function loadData() {
             <td>${item.name}</td>
             <td><img src="${item.image}" style="width:5rem;"></img></td>
             <td>${item.detail}</td>
-            <td>${item.price}</td>
+            <td>R${item.price}</td>
             <td><button style=" border: none; background-color: white;" onclick="deletebtn(${item.id})"><i class="bi bi-trash-fill"></i></button></td>
+            <td>R${item.price}</td>
         </tr>
         `
     })
@@ -33,3 +37,11 @@ function clearcart(){
     localStorage.removeItem('products')
     location.reload()
 }
+
+let amountDue = document.querySelector('#amount-due')
+
+function addAmount(){
+    amountDue.innerHTML = "Total Amount - R" + amount
+}
+
+addAmount()

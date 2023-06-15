@@ -37,10 +37,14 @@ footer {
     width: 100%;
 }
 
-.foot {
-    position: fixed;
-    bottom: 0;
-    width: 100;
+    /* .foot {
+        position: fixed;
+        bottom: 0;
+        width: 100;
+    } */
+
+main{
+    min-height: 75vh;
 }
 
 html,
@@ -51,6 +55,7 @@ body {
 
 .navbar {
     background-color: black;
+    height: 5rem;
 }
 
 .navbar-brand:hover {
@@ -98,13 +103,37 @@ body {
     color: white;
 }
 
+#clearcart {
+    float: left;
+}
+
 #modallbttn{
     float: right;
 }
 
-.sortingbtns{
+.dropdown{
     display: flex;
     justify-content: center;
+}
+
+.dropdown-menu {
+    background-color: rgba(32,33,36,255);
+}
+
+#pricesortbtn {
+    width: 100%;
+}
+
+#namesortbtn {
+    width: 100%;
+}
+
+.pricesortbtn {
+    margin: 5px;
+}
+
+.namesortbtn {
+    margin: 5px;
 }
 
 .tablecont {
@@ -183,13 +212,8 @@ label {
     font-size: x-large;
 }
 
-/* #prodcard { */
-    /* width: 50rem; */
-    /* float: right; */
-/* } */
-
-/* @media screen and (max-width: 425px){
-    .productCard{
-        display: inline-block;
-    }
-} */
+#amount-due {
+    /* border: solid 3px white; */
+    padding: 1rem;
+    float: right;
+}
