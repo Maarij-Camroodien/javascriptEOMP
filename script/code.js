@@ -1,6 +1,7 @@
 let display = document.querySelector(".productsdisp");
 let pricesorting = document.querySelector("#pricesortbtn");
 let nameSort = document.querySelector("#namesortbtn")
+let productslist = [];
 
 let manga = JSON.parse(localStorage.getItem("manga"))
   ? JSON.parse(localStorage.getItem("manga"))
@@ -75,22 +76,22 @@ let manga = JSON.parse(localStorage.getItem("manga"))
           id: 10,
           name: "Bleach Vol.1",
           image:"https://i.postimg.cc/jqZZc8xF/bleach-vol-1.jpg",
-          detail: "Volume 1 Bleach",
+          detail: "Volume 1 of Bleach",
           price: "R290",
         },
         {
           id: 11,
-          name: "Bleach Vol.1",
-          image:"https://i.postimg.cc/jqZZc8xF/bleach-vol-1.jpg",
-          detail: "Volume 1 Bleach",
+          name: "Beserk Vol.1",
+          image:"https://i.postimg.cc/YSP3zJrG/berserk-volume-1.jpg",
+          detail: "Volume 1 of Beserk",
           price: "R290",
         },
         {
           id: 12,
-          name: "Bleach Vol.1",
-          image:"https://i.postimg.cc/jqZZc8xF/bleach-vol-1.jpg",
-          detail: "Volume 1 Bleach",
-          price: "R290",
+          name: "Death Note Vol.6",
+          image:"https://i.postimg.cc/XYC7v5rR/death-note-vol-6.jpg",
+          detail: "Volume 6 of Death Note",
+          price: "R230",
         },
       ])
     );
@@ -101,7 +102,7 @@ function loadData() {
   // displaying on html
   manga.forEach((item) => {
     display.innerHTML += `
-        <div class="col-3  justify-content-center colum">
+         <div class="col-xl-3 col-lg-4 col-md-6 justify-content-center colum">
             <div class="card productCard">
                 <div class="image">
                     <img src="${item.image}" class="card-img-top" alt="product" loading="lazy">
@@ -111,7 +112,7 @@ function loadData() {
                         <p class="card-text">${item.detail}</p>
                         <p class="card-price">${item.price}</p>
                         <div class="bttn">
-                        <button class="cart-button"><i class="bi bi-cart2"></i></button>
+                        <button class="btn text-center" id="addtocart" onclick='checkoutItemBtn(${JSON.stringify(item)})'>Add to Cart</button>
                         </div>
                     </div>
             </div>
@@ -133,6 +134,16 @@ pricesorting.addEventListener("click", (event) => {
   });
   loadData();
 });
+
+function checkoutItemBtn(item) {
+  try{
+      
+    productslist.push(item);
+      localStorage.setItem('products', JSON.stringify(manga));
+  }catch(e) {
+      console.log(`Error message: ${e.message}`);
+  }
+}
 
 nameSort.addEventListener("click", (event) => {
   event.preventDefault();
